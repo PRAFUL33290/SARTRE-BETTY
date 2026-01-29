@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposition - Chorégraphie Mariage Bollywood | Mme Sartre Betty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            background-image: url('https://parvati-india.fr/wp-content/uploads/2023/10/Devotional-Background-For-god-worship-Animation-video.00_00_09_20.Still001.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .devis-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.92);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border: 2px solid #d29d59;
+        }
+
+        /* SVG Icons */
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            vertical-align: middle;
+            flex-shrink: 0;
+        }
+
+        .icon-small {
+            width: 18px;
+            height: 18px;
+        }
+
+        .icon-large {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Header */
+        .header {
+            background: #b90d01;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            max-width: 180px;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-align: center;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            color: #fff;
+            text-align: center;
+        }
+
+        .header-decoration {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .header-decoration .icon {
+            fill: #d29d59;
+            width: 28px;
+            height: 28px;
+        }
+
+        /* Info Client */
+        .client-info {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            padding: 30px 40px;
+            background: rgba(20, 20, 20, 0.95);
+            border-bottom: 3px solid #d29d59;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .client-info div {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .client-info h3 {
+            color: #d29d59;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .client-info p {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Section Title */
+        .section-title {
+            background: #b90d01;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        /* Options */
+        .option {
+            padding: 30px 40px;
+            border-bottom: 1px solid rgba(210, 157, 89, 0.3);
+            background: rgba(15, 15, 15, 0.95);
+        }
+
+        .option:last-of-type {
+            border-bottom: none;
+        }
+
+        .option-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .option-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .checkbox {
+            width: 28px;
+            height: 28px;
+            border: 3px solid #d29d59;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: transparent;
+            flex-shrink: 0;
+        }
+
+        .checkbox:hover {
+            background: rgba(210, 157, 89, 0.2);
+        }
+
+        .checkbox .icon {
+            fill: #d29d59;
+            opacity: 0;
+        }
+
+        .option-name {
+            font-size: 1.4rem;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .option-name span {
+            color: #d29d59;
+        }
+
+        .option-price {
+            background: #b90d01;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(185, 13, 1, 0.4);
+            text-align: center;
+        }
+
+        .option-description {
+            background: rgba(210, 157, 89, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #d29d59;
+        }
+
+        .option-description p {
+            color: #e0e0e0;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .prestations-list {
+            background: rgba(30, 30, 30, 0.9);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(210, 157, 89, 0.2);
+        }
+
+        .prestations-list h4 {
+            color: #d29d59;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .prestations-list ul {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .prestations-list li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            color: #ddd;
+            border-bottom: 1px dashed rgba(210, 157, 89, 0.3);
+            display: flex;
+            align-items: center;
+        }
+
+        .prestations-list li:last-child {
+            border-bottom: none;
+        }
+
+        .prestations-list li .icon {
+            position: absolute;
+            left: 0;
+            fill: #b90d01;
+            width: 20px;
+            height: 20px;
+        }
+
+        .duration-info {
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: rgba(185, 13, 1, 0.2);
+            border-radius: 6px;
+            color: #d29d59;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid rgba(210, 157, 89, 0.3);
+            text-align: center;
+        }
+
+        /* Frais & Notes */
+        .frais-deplacement {
+            background: rgba(210, 157, 89, 0.15);
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #d29d59;
+            font-weight: 500;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .note-video {
+            background: rgba(185, 13, 1, 0.15);
+            padding: 12px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #d29d59;
+            font-weight: 500;
+            text-align: center;
+            font-style: italic;
+            border-top: 1px solid rgba(210, 157, 89, 0.2);
+            flex-wrap: wrap;
+        }
+
+        /* Mentions */
+        .mentions {
+            padding: 30px 40px;
+            background: rgba(20, 20, 20, 0.95);
+        }
+
+        .mentions h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .mentions h3 .icon {
+            fill: #d29d59;
+        }
+
+        .mentions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .mention-card {
+            background: rgba(30, 30, 30, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-top: 4px solid #b90d01;
+            text-align: center;
+        }
+
+        .mention-card h4 {
+            color: #d29d59;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .mention-card h4 .icon {
+            fill: #b90d01;
+        }
+
+        .mention-card p {
+            color: #bbb;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 2px solid #d29d59;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+            color: #ccc;
+            text-align: center;
+        }
+
+        .footer-logo {
+            max-width: 120px;
+            margin: 0 auto 15px auto;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .website-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #d29d59;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .website-link:hover {
+            color: #fff;
+        }
+
+        /* Playlist Section */
+        .playlist-section {
+            padding: 30px 40px;
+            background: rgba(15, 15, 15, 0.95);
+            border-top: 2px solid #d29d59;
+        }
+
+        .playlist-section h3 {
+            color: #d29d59;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .playlist-item {
+            background: rgba(30, 30, 30, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #b90d01;
+        }
+
+        .playlist-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .playlist-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .playlist-number {
+            background: #b90d01;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .playlist-title {
+            color: #d29d59;
+            font-size: 1.1rem;
+            font-weight: 700;
+            flex: 1;
+        }
+
+        .playlist-mood {
+            background: rgba(210, 157, 89, 0.2);
+            color: #d29d59;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .playlist-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .playlist-detail {
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .playlist-detail strong {
+            color: #fff;
+        }
+
+        .youtube-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #b90d01;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .youtube-link:hover {
+            color: #d29d59;
+        }
+
+        .youtube-link .icon {
+            fill: currentColor;
+        }
+
+        .playlist-total {
+            background: #b90d01;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Choreography Section */
+        .choreo-section {
+            padding: 30px 40px;
+            background: rgba(20, 20, 20, 0.95);
+        }
+
+        .choreo-section h3 {
+            color: #d29d59;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .choreo-sequence {
+            background: rgba(30, 30, 30, 0.9);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-left: 4px solid #d29d59;
+        }
+
+        .choreo-sequence-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .choreo-sequence-title {
+            color: #d29d59;
+            font-weight: 700;
+        }
+
+        .choreo-sequence-time {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .choreo-sequence-moves {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            padding-left: 15px;
+            border-left: 2px solid rgba(210, 157, 89, 0.3);
+        }
+
+        .difficulty-badge {
+            background: rgba(210, 157, 89, 0.2);
+            color: #d29d59;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        /* Responsive - Tablette */
+        @media (max-width: 900px) {
+            body {
+                padding: 30px 15px;
+            }
+
+            .devis-container {
+                border-radius: 15px;
+            }
+
+            .header, .option, .mentions, .footer {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .mentions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Responsive - Mobile */
+        @media (max-width: 680px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .devis-container {
+                border-radius: 12px;
+            }
+
+            .header {
+                padding: 25px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header .subtitle {
+                font-size: 1rem;
+            }
+
+            .logo {
+                max-width: 140px;
+            }
+
+            .client-info {
+                flex-direction: column;
+                gap: 20px;
+                padding: 25px 20px;
+            }
+
+            .client-info div {
+                min-width: 100%;
+            }
+
+            .section-title {
+                padding: 15px 20px;
+                font-size: 1.1rem;
+            }
+
+            .option {
+                padding: 25px 20px;
+            }
+
+            .option-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .option-title {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .option-name {
+                font-size: 1.15rem;
+            }
+
+            .option-price {
+                font-size: 1.3rem;
+                padding: 10px 20px;
+            }
+
+            .option-description {
+                padding: 15px;
+            }
+
+            .prestations-list {
+                padding: 20px 15px;
+            }
+
+            .prestations-list h4 {
+                font-size: 1rem;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .prestations-list li {
+                padding-left: 30px;
+                font-size: 0.95rem;
+            }
+
+            .duration-info {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .frais-deplacement, .note-video {
+                padding: 15px 20px;
+                font-size: 0.9rem;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .mentions {
+                padding: 25px 20px;
+            }
+
+            .mentions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mention-card {
+                padding: 15px;
+            }
+
+            .footer {
+                padding: 25px 20px;
+            }
+
+            .footer-logo {
+                max-width: 100px;
+            }
+
+            .playlist-item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .playlist-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsive - Très petit mobile */
+        @media (max-width: 400px) {
+            body {
+                padding: 10px 5px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .option-name {
+                font-size: 1rem;
+            }
+
+            .option-price {
+                font-size: 1.2rem;
+            }
+
+            .prestations-list li {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                display: block;
+            }
+
+            .devis-container {
+                box-shadow: none;
+                border-radius: 0;
+                background: white;
+                border: 1px solid #ccc;
+            }
+
+            .option, .client-info, .mentions {
+                background: white;
+            }
+
+            .option-name, .client-info p, .mentions h3 {
+                color: #333;
+            }
+
+            .prestations-list li, .option-description p, .mention-card p {
+                color: #333;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="devis-container">
+        <!-- Header -->
+        <div class="header">
+            <img src="https://parvati-india.fr/wp-content/uploads/2023/10/LOGO-PARVATI-INDIA-2.png" alt="Parvati India Logo" class="logo">
+            <div class="header-decoration">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </div>
+            <h1>PROPOSITION</h1>
+            <p class="subtitle">Création & Accompagnement Chorégraphie d'Ouverture de Bal – Mariage</p>
+        </div>
+
+        <!-- Client Info -->
+        <div class="client-info">
+            <div>
+                <h3>
+                    <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    Cliente
+                </h3>
+                <p>Mme SARTRE BETTY</p>
+            </div>
+            <div>
+                <h3>
+                    <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+                    Date de l'événement
+                </h3>
+                <p>2 mai</p>
+            </div>
+            <div>
+                <h3>
+                    <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                    Prestation
+                </h3>
+                <p>Ouverture de Bal Bollywood</p>
+            </div>
+        </div>
+
+        <!-- Section Options -->
+        <div class="section-title">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            CHOISISSEZ VOTRE FORMULE
+        </div>
+
+        <!-- Option 1 -->
+        <div class="option">
+            <div class="option-header">
+                <div class="option-title">
+                    <div class="checkbox">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <div class="option-name">Formule <span>« ÉCLAT BOLLYWOOD »</span></div>
+                </div>
+                <div class="option-price">280,00 € TTC</div>
+            </div>
+
+            <div class="option-description">
+                <p>
+                    Création d'une chorégraphie d'ouverture de bal Bollywood <strong>sur-mesure</strong>, 
+                    d'une durée d'environ <strong>5 minutes</strong>, adaptée à des danseurs débutants. 
+                    La prestation comprend une montée progressive du style romantique vers un final festif.
+                </p>
+            </div>
+
+            <div class="prestations-list">
+                <h4>
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    Détail des prestations incluses :
+                </h4>
+                <ul>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <strong>4 séances d'entraînement</strong> d'1 heure
+                    </li>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Création chorégraphique <strong>personnalisée</strong>
+                    </li>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Playlist musicale personnalisée <strong>(5 titres – refrains uniquement)</strong>
+                    </li>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Conseils d'entrée de bal et de transitions
+                    </li>
+                </ul>
+                <div class="duration-info">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    Durée totale : 4 séances d'1 heure
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 2 -->
+        <div class="option">
+            <div class="option-header">
+                <div class="option-title">
+                    <div class="checkbox">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <div class="option-name">Formule <span>« GRAND SPECTACLE BOLLYWOOD »</span></div>
+                </div>
+                <div class="option-price">500,00 € TTC</div>
+            </div>
+
+            <div class="option-description">
+                <p>
+                    Création et accompagnement <strong>complet</strong> d'une chorégraphie d'ouverture de bal 
+                    Bollywood sur-mesure, d'une durée d'environ <strong>5 minutes</strong>, incluant un 
+                    accompagnement renforcé et une <strong>présence le jour du mariage</strong> afin d'assurer 
+                    le bon déroulement de l'entrée de bal.
+                </p>
+            </div>
+
+            <div class="prestations-list">
+                <h4>
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    Détail des prestations incluses :
+                </h4>
+                <ul>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <strong>8 à 10 séances d'entraînement</strong> (1h à 1h30 selon progression)
+                    </li>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Création chorégraphique <strong>complète et évolutive</strong>
+                    </li>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <strong>Montage musical final</strong> (mix 5 minutes)
+                    </li>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Fiche récapitulative des mouvements et planning des séances
+                    </li>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Séance <strong>« tenues & mise en scène mariage »</strong>
+                    </li>
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <strong>Présence le jour J</strong> (échauffement, répétition express, accompagnement jusqu'au lancement de la musique)
+                    </li>
+                </ul>
+                <div class="duration-info">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    Durée totale : 8 à 10 séances d'1h à 1h30
+                </div>
+            </div>
+        </div>
+
+        <!-- Frais de déplacement -->
+        <div class="frais-deplacement">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+            <strong>Frais de déplacement :</strong> Non inclus – calculés et ajoutés après validation du lieu de l'événement.
+        </div>
+
+        <!-- Note vidéo -->
+        <div class="note-video">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"/></svg>
+            <span>Support vidéo disponible sur demande (facturé indépendamment)</span>
+        </div>
+
+        <!-- Mentions complémentaires -->
+        <div class="mentions">
+            <h3>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                Mentions complémentaires
+            </h3>
+            <div class="mentions-grid">
+                <div class="mention-card">
+                    <h4>
+                        <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                        Conditions de règlement
+                    </h4>
+                    <p>
+                        Acompte de <strong>30 %</strong> à la signature<br>
+                        Solde le jour de la dernière séance / jour J
+                    </p>
+                </div>
+                <div class="mention-card">
+                    <h4>
+                        <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+                        Validité
+                    </h4>
+                    <p>
+                        Proposition valable <strong>30 jours</strong> à compter de la date d'émission.
+                    </p>
+                </div>
+                <div class="mention-card">
+                    <h4>
+                        <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                        Annulation / Report
+                    </h4>
+                    <p>
+                        Séance annulée moins de <strong>48h à l'avance</strong> considérée comme due.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playlist Medley -->
+        <div class="playlist-section">
+            <h3>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                Playlist Medley — Montée progressive
+            </h3>
+
+            <!-- Titre 1 -->
+            <div class="playlist-item">
+                <div class="playlist-item-header">
+                    <div class="playlist-number">1</div>
+                    <div class="playlist-title">Hawayein</div>
+                    <div class="playlist-mood">LENT / ROMANTIQUE</div>
+                </div>
+                <div class="playlist-details">
+                    <div class="playlist-detail"><strong>Durée :</strong> 45 secondes (refrain)</div>
+                    <div class="playlist-detail"><strong>Tempo :</strong> 85 BPM</div>
+                    <div class="playlist-detail"><strong>Artiste :</strong> Arijit Singh — Film Jab Harry Met Sejal</div>
+                    <div class="playlist-detail"><strong>Mouvements :</strong> Entrée élégante, regards amoureux, pas croisés simples</div>
+                </div>
+                <a href="https://www.youtube.com/watch?v=cYOB941gyXI" target="_blank" class="youtube-link">
+                    <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                    Écouter sur YouTube
+                </a>
+            </div>
+
+            <!-- Titre 2 -->
+            <div class="playlist-item">
+                <div class="playlist-item-header">
+                    <div class="playlist-number">2</div>
+                    <div class="playlist-title">Zara Sa Dil</div>
+                    <div class="playlist-mood">DOUCEUR</div>
+                </div>
+                <div class="playlist-details">
+                    <div class="playlist-detail"><strong>Durée :</strong> 45 secondes (refrain)</div>
+                    <div class="playlist-detail"><strong>Tempo :</strong> 95 BPM</div>
+                    <div class="playlist-detail"><strong>Artiste :</strong> KK — Film Jannat</div>
+                    <div class="playlist-detail"><strong>Mouvements :</strong> Hamsa mudras, rotations lentes enlacées</div>
+                </div>
+                <a href="https://www.youtube.com/watch?v=UvLkj8d4Vmk" target="_blank" class="youtube-link">
+                    <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                    Écouter sur YouTube
+                </a>
+            </div>
+
+            <!-- Titre 3 -->
+            <div class="playlist-item">
+                <div class="playlist-item-header">
+                    <div class="playlist-number">3</div>
+                    <div class="playlist-title">Chammak Challo</div>
+                    <div class="playlist-mood">MONTÉE ÉNERGIE</div>
+                </div>
+                <div class="playlist-details">
+                    <div class="playlist-detail"><strong>Durée :</strong> 1 minute (refrain)</div>
+                    <div class="playlist-detail"><strong>Tempo :</strong> 128 BPM</div>
+                    <div class="playlist-detail"><strong>Artiste :</strong> Akon feat. Hamsika Iyer — Film Ra.One</div>
+                    <div class="playlist-detail"><strong>Mouvements :</strong> Shoulder moves, hook step iconique</div>
+                </div>
+                <a href="https://www.youtube.com/watch?v=ladKqvPqMxc" target="_blank" class="youtube-link">
+                    <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                    Écouter sur YouTube
+                </a>
+            </div>
+
+            <!-- Titre 4 -->
+            <div class="playlist-item">
+                <div class="playlist-item-header">
+                    <div class="playlist-number">4</div>
+                    <div class="playlist-title">Naane Indhiran</div>
+                    <div class="playlist-mood">TAMOUL ÉLÉGANT</div>
+                </div>
+                <div class="playlist-details">
+                    <div class="playlist-detail"><strong>Durée :</strong> 1 min 15 (refrain)</div>
+                    <div class="playlist-detail"><strong>Tempo :</strong> 110 BPM</div>
+                    <div class="playlist-detail"><strong>Artiste :</strong> Devi Sri Prasad — Film Sivaji (Rajinikanth)</div>
+                    <div class="playlist-detail"><strong>Mouvements :</strong> Ondulations sensuelles, mudras élégants</div>
+                </div>
+                <a href="https://www.youtube.com/watch?v=r50QPUqErgM" target="_blank" class="youtube-link">
+                    <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                    Écouter sur YouTube
+                </a>
+            </div>
+
+            <!-- Titre 5 -->
+            <div class="playlist-item">
+                <div class="playlist-item-header">
+                    <div class="playlist-number">5</div>
+                    <div class="playlist-title">Gallan Goodiyaan</div>
+                    <div class="playlist-mood">EXPLOSION FINALE</div>
+                </div>
+                <div class="playlist-details">
+                    <div class="playlist-detail"><strong>Durée :</strong> 1 min 15 (refrain)</div>
+                    <div class="playlist-detail"><strong>Tempo :</strong> 140 BPM</div>
+                    <div class="playlist-detail"><strong>Artiste :</strong> Yashita Sharma, Manish Kumar — Film Dil Dhadakne Do</div>
+                    <div class="playlist-detail"><strong>Mouvements :</strong> Dhol beats, claps collectifs, invitation piste finale</div>
+                </div>
+                <a href="https://www.youtube.com/watch?v=jCEdTq3j-0U" target="_blank" class="youtube-link">
+                    <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                    Écouter sur YouTube
+                </a>
+            </div>
+
+            <div class="playlist-total">
+                <svg class="icon" viewBox="0 0 24 24" style="fill: white; vertical-align: middle; margin-right: 8px;"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                Durée totale mixée : 5 minutes
+            </div>
+        </div>
+
+        <!-- Structure Chorégraphie -->
+        <div class="choreo-section">
+            <h3>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+                Structure chorégraphique — Niveau débutant
+            </h3>
+
+            <div class="choreo-sequence">
+                <div class="choreo-sequence-header">
+                    <span class="choreo-sequence-title">Séquence 1 — Hawayein</span>
+                    <span class="choreo-sequence-time">0:00 - 0:45</span>
+                </div>
+                <div class="choreo-sequence-moves">
+                    Entrée latérale main dans la main • 4 pas croisés synchronisés • Rotation lente face à face
+                </div>
+            </div>
+
+            <div class="choreo-sequence">
+                <div class="choreo-sequence-header">
+                    <span class="choreo-sequence-title">Séquence 2 — Zara Sa Dil</span>
+                    <span class="choreo-sequence-time">0:45 - 1:30</span>
+                </div>
+                <div class="choreo-sequence-moves">
+                    Hamsa mudras (cygne) • Rotations douces enlacées • Transition préparation énergie
+                </div>
+            </div>
+
+            <div class="choreo-sequence">
+                <div class="choreo-sequence-header">
+                    <span class="choreo-sequence-title">Séquence 3 — Chammak Challo</span>
+                    <span class="choreo-sequence-time">1:30 - 2:30</span>
+                </div>
+                <div class="choreo-sequence-moves">
+                    Break : changement tempo • Shoulder moves alternés • Hook step iconique ×1
+                </div>
+            </div>
+
+            <div class="choreo-sequence">
+                <div class="choreo-sequence-header">
+                    <span class="choreo-sequence-title">Séquence 4 — Naane Indhiran</span>
+                    <span class="choreo-sequence-time">2:30 - 3:45</span>
+                </div>
+                <div class="choreo-sequence-moves">
+                    Ralentissement élégant • Ondulations verticales • Mudras élégants
+                </div>
+            </div>
+
+            <div class="choreo-sequence">
+                <div class="choreo-sequence-header">
+                    <span class="choreo-sequence-title">Séquence 5 — Gallan Goodiyaan</span>
+                    <span class="choreo-sequence-time">3:45 - 5:00</span>
+                </div>
+                <div class="choreo-sequence-moves">
+                    Explosion finale : jump léger • Claps au refrain (public suit) • Dhol step rapide • Invitation piste + freeze final
+                </div>
+            </div>
+
+            <div class="difficulty-badge">
+                <svg class="icon icon-small" viewBox="0 0 24 24" style="fill: #d29d59; vertical-align: middle; margin-right: 8px;"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Difficulté : 3/10 — Répétitions, patterns simples, pas de lifts
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <img src="https://parvati-india.fr/wp-content/uploads/2023/10/LOGO-PARVATI-INDIA-2.png" alt="Parvati India Logo" class="footer-logo">
+            
+            <a href="https://parvati-india.fr/" target="_blank" class="website-link">
+                <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                parvati-india.fr
+            </a>
+            
+            <p>En validant cette proposition, le client reconnaît avoir pris connaissance des conditions générales et accepte les termes de la prestation.</p>
+        </div>
+    </div>
+</body>
+</html>
