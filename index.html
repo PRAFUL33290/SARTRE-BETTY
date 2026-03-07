@@ -1039,6 +1039,38 @@
             }
         }
 
+        /* Option sélectionnée */
+        .option.selected {
+            background: rgba(210, 157, 89, 0.08);
+            border-left: 6px solid #d29d59;
+        }
+
+        .option.selected .checkbox {
+            background: #d29d59;
+            border-color: #d29d59;
+        }
+
+        .option.selected .checkbox .icon {
+            fill: #000;
+            opacity: 1;
+        }
+
+        .selected-label {
+            background: #d29d59;
+            color: #000;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
         /* Print styles */
         @media print {
             body {
@@ -1115,13 +1147,13 @@
         </div>
 
         <!-- Option 1 -->
-        <div class="option">
+        <div class="option selected">
             <div class="option-header">
                 <div class="option-title">
                     <div class="checkbox">
                         <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                     </div>
-                    <div class="option-name">Formule <span>« ÉCLAT BOLLYWOOD »</span></div>
+                    <div class="option-name">Formule <span>« ÉCLAT BOLLYWOOD »</span> <span class="selected-label">✓ Sélectionnée</span></div>
                 </div>
                 <div class="option-price">280,00 € TTC</div>
             </div>
@@ -1150,7 +1182,7 @@
                     </li>
                     <li>
                         <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        Playlist musicale personnalisée <strong>(5 titres – refrains uniquement)</strong>
+                        Playlist musicale personnalisée <strong>(6 titres – refrains uniquement)</strong>
                     </li>
                     <li>
                         <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -1360,16 +1392,35 @@
             <div class="playlist-item">
                 <div class="playlist-item-header">
                     <div class="playlist-number">5</div>
-                    <div class="playlist-title">Gallan Goodiyaan</div>
-                    <div class="playlist-mood">EXPLOSION FINALE</div>
+                    <div class="playlist-title">Khaanthaa</div>
+                    <div class="playlist-mood">ÉLÉGANCE ÉPIQUE</div>
+                </div>
+                <div class="playlist-details">
+                    <div class="playlist-detail"><strong>Durée&nbsp;:</strong> 1 minute&nbsp;(refrain)</div>
+                    <div class="playlist-detail"><strong>Tempo&nbsp;:</strong> 105 BPM</div>
+                    <div class="playlist-detail"><strong>Artiste&nbsp;:</strong> Jhanu Chanthar — Film Kaantha (Tamil, 2025)</div>
+                    <div class="playlist-detail"><strong>Mouvements&nbsp;:</strong> Port de bras ample, lignes dramatiques, transition vers le final</div>
+                </div>
+                <a href="https://www.youtube.com/results?search_query=Khaanthaa+Kaantha+Tamil+2025+official" target="_blank" class="youtube-link">
+                    <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                    Rechercher sur YouTube
+                </a>
+            </div>
+
+            <!-- Titre 6 -->
+            <div class="playlist-item">
+                <div class="playlist-item-header">
+                    <div class="playlist-number">6</div>
+                    <div class="playlist-title">Jai Ho</div>
+                    <div class="playlist-mood">FINAL EXPLOSIF</div>
                 </div>
                 <div class="playlist-details">
                     <div class="playlist-detail"><strong>Durée&nbsp;:</strong> 1 min 15&nbsp;(refrain)</div>
                     <div class="playlist-detail"><strong>Tempo&nbsp;:</strong> 140 BPM</div>
-                    <div class="playlist-detail"><strong>Artiste&nbsp;:</strong> Yashita Sharma, Manish Kumar — Film Dil Dhadakne Do</div>
-                    <div class="playlist-detail"><strong>Mouvements&nbsp;:</strong> Dhol beats, claps collectifs, invitation piste finale</div>
+                    <div class="playlist-detail"><strong>Artiste&nbsp;:</strong> A.R. Rahman — Film Slumdog Millionaire (2008)</div>
+                    <div class="playlist-detail"><strong>Mouvements&nbsp;:</strong> Explosion finale, claps collectifs, invitation piste + freeze final</div>
                 </div>
-                <a href="https://www.youtube.com/watch?v=jCEdTq3j-0U" target="_blank" class="youtube-link">
+                <a href="https://www.youtube.com/results?search_query=Jai+Ho+AR+Rahman+Slumdog+Millionaire+official" target="_blank" class="youtube-link">
                     <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
                     Écouter sur YouTube
                 </a>
@@ -1377,7 +1428,7 @@
 
             <div class="playlist-total">
                 <svg class="icon" viewBox="0 0 24 24" style="fill: white; vertical-align: middle; margin-right: 8px;"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                Durée totale mixée : 5 minutes
+                Durée totale mixée : ~6 minutes
             </div>
         </div>
 
@@ -1430,8 +1481,18 @@
 
             <div class="choreo-sequence">
                 <div class="choreo-sequence-header">
-                    <span class="choreo-sequence-title">Séquence 5 — Gallan Goodiyaan</span>
-                    <span class="choreo-sequence-time">3:45 - 5:00</span>
+                    <span class="choreo-sequence-title">Séquence 5 — Khaanthaa</span>
+                    <span class="choreo-sequence-time">3:45 - 4:45</span>
+                </div>
+                <div class="choreo-sequence-moves">
+                    Port de bras ample • Lignes dramatiques en duo • Transition montée vers le final
+                </div>
+            </div>
+
+            <div class="choreo-sequence">
+                <div class="choreo-sequence-header">
+                    <span class="choreo-sequence-title">Séquence 6 — Jai Ho</span>
+                    <span class="choreo-sequence-time">4:45 - 6:00</span>
                 </div>
                 <div class="choreo-sequence-moves">
                     Explosion finale&nbsp;: jump léger • Claps au refrain&nbsp;(public suit) • Dhol step rapide • Invitation piste + freeze final
