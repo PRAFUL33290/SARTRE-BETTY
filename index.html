@@ -1123,6 +1123,78 @@
             vertical-align: middle;
         }
 
+        /* Playlist progression bar */
+        .playlist-progression {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 15px 22px;
+            background: rgba(20, 20, 20, 0.95);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .pp-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            min-width: 65px;
+            flex-shrink: 0;
+        }
+
+        .pp-dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: #fff;
+        }
+
+        .pp-label {
+            font-size: 0.58rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            max-width: 65px;
+            line-height: 1.3;
+        }
+
+        .pp-connector {
+            height: 3px;
+            flex: 1;
+            min-width: 12px;
+            margin-bottom: 24px;
+        }
+
+        /* BPM Badge */
+        .bpm-badge {
+            background: rgba(210, 157, 89, 0.15);
+            border: 1px solid rgba(210, 157, 89, 0.35);
+            color: #d29d59;
+            padding: 3px 9px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+        }
+
+        /* Option interactive */
+        .option {
+            cursor: pointer;
+        }
+
+        .option:hover:not(.selected) {
+            background: rgba(210, 157, 89, 0.04);
+        }
+
         /* Print styles */
         @media print {
             body {
@@ -1380,12 +1452,46 @@
                 Playlist Medley — Montée progressive
             </h3>
 
+            <!-- Progression visuelle -->
+            <div class="playlist-progression">
+                <div class="pp-step">
+                    <div class="pp-dot" style="background:#6b4c9a;">1</div>
+                    <span class="pp-label" style="color:#a78bca;">Romantique</span>
+                </div>
+                <div class="pp-connector" style="background:linear-gradient(90deg,#6b4c9a,#1976d2);"></div>
+                <div class="pp-step">
+                    <div class="pp-dot" style="background:#1976d2;">2</div>
+                    <span class="pp-label" style="color:#64b5f6;">Douceur</span>
+                </div>
+                <div class="pp-connector" style="background:linear-gradient(90deg,#1976d2,#d97706);"></div>
+                <div class="pp-step">
+                    <div class="pp-dot" style="background:#d97706;">3</div>
+                    <span class="pp-label" style="color:#fbbf24;">Commercial</span>
+                </div>
+                <div class="pp-connector" style="background:linear-gradient(90deg,#d97706,#2e7d7d);"></div>
+                <div class="pp-step">
+                    <div class="pp-dot" style="background:#2e7d7d;">4</div>
+                    <span class="pp-label" style="color:#5bb5b5;">Énergie<br>Tamoule</span>
+                </div>
+                <div class="pp-connector" style="background:linear-gradient(90deg,#2e7d7d,#7c3aed);"></div>
+                <div class="pp-step">
+                    <div class="pp-dot" style="background:#7c3aed;">5</div>
+                    <span class="pp-label" style="color:#c4b5fd;">Épique</span>
+                </div>
+                <div class="pp-connector" style="background:linear-gradient(90deg,#7c3aed,#b90d01);"></div>
+                <div class="pp-step">
+                    <div class="pp-dot" style="background:#b90d01;">6</div>
+                    <span class="pp-label" style="color:#f87171;">FINAL</span>
+                </div>
+            </div>
+
             <!-- Titre 1 -->
             <div class="playlist-item">
                 <div class="playlist-item-header">
                     <div class="playlist-number">1</div>
                     <div class="playlist-title">Hawayein</div>
                     <div class="playlist-mood">LENT / ROMANTIQUE</div>
+                    <span class="bpm-badge">85 BPM</span>
                 </div>
                 <div class="playlist-details">
                     <div class="playlist-detail"><strong>Durée&nbsp;:</strong> 45 secondes&nbsp;(refrain)</div>
@@ -1405,6 +1511,7 @@
                     <div class="playlist-number">2</div>
                     <div class="playlist-title">Zara Sa Dil</div>
                     <div class="playlist-mood">DOUCEUR</div>
+                    <span class="bpm-badge">95 BPM</span>
                 </div>
                 <div class="playlist-details">
                     <div class="playlist-detail"><strong>Durée&nbsp;:</strong> 45 secondes&nbsp;(refrain)</div>
@@ -1423,7 +1530,8 @@
                 <div class="playlist-item-header">
                     <div class="playlist-number">3</div>
                     <div class="playlist-title">Chammak Challo</div>
-                    <div class="playlist-mood">MONTÉE ÉNERGIE</div>
+                    <div class="playlist-mood">COMMERCIAL</div>
+                    <span class="bpm-badge">128 BPM</span>
                 </div>
                 <div class="playlist-details">
                     <div class="playlist-detail"><strong>Durée&nbsp;:</strong> 1 minute&nbsp;(refrain)</div>
@@ -1442,7 +1550,8 @@
                 <div class="playlist-item-header">
                     <div class="playlist-number">4</div>
                     <div class="playlist-title">Naane Indhiran</div>
-                    <div class="playlist-mood">TAMOUL ÉLÉGANT</div>
+                    <div class="playlist-mood">ÉNERGIE TAMOULE</div>
+                    <span class="bpm-badge">110 BPM</span>
                 </div>
                 <div class="playlist-details">
                     <div class="playlist-detail"><strong>Durée&nbsp;:</strong> 1 min 15&nbsp;(refrain)</div>
@@ -1462,6 +1571,7 @@
                     <div class="playlist-number">5</div>
                     <div class="playlist-title">Khaanthaa</div>
                     <div class="playlist-mood">ÉLÉGANCE ÉPIQUE</div>
+                    <span class="bpm-badge">105 BPM</span>
                 </div>
                 <div class="playlist-details">
                     <div class="playlist-detail"><strong>Durée&nbsp;:</strong> 1 minute&nbsp;(refrain)</div>
@@ -1481,6 +1591,7 @@
                     <div class="playlist-number">6</div>
                     <div class="playlist-title">Jai Ho</div>
                     <div class="playlist-mood">FINAL EXPLOSIF</div>
+                    <span class="bpm-badge">140 BPM</span>
                 </div>
                 <div class="playlist-details">
                     <div class="playlist-detail"><strong>Durée&nbsp;:</strong> 1 min 15&nbsp;(refrain)</div>
@@ -1585,5 +1696,15 @@
             <p>En validant cette proposition, le client reconnaît avoir pris connaissance des conditions générales et accepte les termes de la prestation.</p>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.option').forEach(function(option) {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.option').forEach(function(o) {
+                    o.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+        });
+    </script>
 </body>
 </html>
