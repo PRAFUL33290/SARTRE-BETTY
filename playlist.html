@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist Medley Personnalisée | Mme Sartre Betty — Parvati India</title>
+    <title>Playlist Medley Personnalisée | Betty & Laurent — Parvati India</title>
     <style>
         * {
             margin: 0;
@@ -94,6 +94,25 @@
             color: white;
             padding: 30px 40px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.35;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header > *:not(.header-video) {
+            position: relative;
+            z-index: 1;
         }
 
         .logo {
@@ -529,6 +548,9 @@
 
         <!-- Header -->
         <div class="header">
+            <video class="header-video" autoplay loop muted playsinline>
+                <source src="https://parvati-india.fr/wp-content/uploads/2023/10/Devotional-Background-For-god-worship-Animation-video.mp4" type="video/mp4">
+            </video>
             <img src="https://parvati-india.fr/wp-content/uploads/2023/10/LOGO-PARVATI-INDIA-2.png" alt="Parvati India" class="logo">
             <div class="header-deco">
                 <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
@@ -539,7 +561,7 @@
             <p class="subtitle">6 titres — Montée progressive • Refrains uniquement</p>
             <div class="client-badge">
                 <svg style="width:14px;height:14px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                Mme SARTRE BETTY — Mariage 2 mai
+                Mme SARTRE BETTY & Mr DUMAY LAURENT — Mariage 2 mai
             </div>
         </div>
 
@@ -714,7 +736,7 @@
                     <div class="song-number mood-epique">4</div>
                     <div class="song-title-block">
                         <div class="song-title">Khaanthaa</div>
-                        <div class="song-subtitle">Demande spéciale — Betty</div>
+                        <div class="song-subtitle">Demande spéciale — Betty & Laurent</div>
                     </div>
                     <div class="song-badges">
                         <span class="badge-mood mood-epique" style="color:#fff;">Élégance Épique</span>

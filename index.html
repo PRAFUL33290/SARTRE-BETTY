@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposition - Chorégraphie Mariage Bollywood | Mme Sartre Betty</title>
+    <title>Proposition - Chorégraphie Mariage Bollywood | Sartre Betty & Dumay Laurent</title>
     <style>
         * {
             margin: 0;
@@ -114,6 +114,24 @@
             padding: 30px 40px;
             text-align: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .header-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.35;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header > *:not(.header-video) {
+            position: relative;
+            z-index: 1;
         }
 
         .logo {
@@ -1244,6 +1262,9 @@
     <div class="devis-container">
         <!-- Header -->
         <div class="header">
+            <video class="header-video" autoplay loop muted playsinline>
+                <source src="https://parvati-india.fr/wp-content/uploads/2023/10/Devotional-Background-For-god-worship-Animation-video.mp4" type="video/mp4">
+            </video>
             <img src="https://parvati-india.fr/wp-content/uploads/2023/10/LOGO-PARVATI-INDIA-2.png" alt="Parvati India Logo" class="logo">
             <div class="header-decoration">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
@@ -1252,7 +1273,7 @@
             </div>
             <h1>PROPOSITION</h1>
             <img src="https://parvati-india.fr/wp-content/uploads/2026/01/LOGO-BOLLYWOOD.png" alt="Bollywood Logo" class="bollywood-logo">
-            <p class="subtitle">Création & Accompagnement Chorégraphie d'Ouverture de Bal – Mariage</p>
+            <p class="subtitle">Création & Accompagnement Chorégraphie d'Ouverture de Bal<br>Mariage de Betty & Laurent — 2 mai</p>
         </div>
 
         <!-- Client Info -->
@@ -1260,9 +1281,9 @@
             <div>
                 <h3>
                     <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                    Cliente
+                    Mariés
                 </h3>
-                <p>Mme SARTRE BETTY</p>
+                <p>Mme SARTRE BETTY<br>&amp; Mr DUMAY LAURENT</p>
             </div>
             <div>
                 <h3>
@@ -1488,9 +1509,9 @@
             <!-- Titre 1 -->
             <div class="playlist-item">
                 <div class="playlist-item-header">
-                    <div class="playlist-number">1</div>
+                    <div class="playlist-number" style="background:#6b4c9a;">1</div>
                     <div class="playlist-title">Hawayein</div>
-                    <div class="playlist-mood">LENT / ROMANTIQUE</div>
+                    <div class="playlist-mood" style="background:rgba(107,76,154,0.25);color:#a78bca;border:1px solid rgba(107,76,154,0.4);">LENT / ROMANTIQUE</div>
                     <span class="bpm-badge">85 BPM</span>
                 </div>
                 <div class="playlist-details">
@@ -1508,9 +1529,9 @@
             <!-- Titre 2 -->
             <div class="playlist-item">
                 <div class="playlist-item-header">
-                    <div class="playlist-number">2</div>
+                    <div class="playlist-number" style="background:#2e7d7d;">2</div>
                     <div class="playlist-title">Zara Sa Dil</div>
-                    <div class="playlist-mood">DOUCEUR</div>
+                    <div class="playlist-mood" style="background:rgba(46,125,125,0.25);color:#5bb5b5;border:1px solid rgba(46,125,125,0.4);">DOUCEUR</div>
                     <span class="bpm-badge">95 BPM</span>
                 </div>
                 <div class="playlist-details">
@@ -1528,9 +1549,9 @@
             <!-- Titre 3 -->
             <div class="playlist-item">
                 <div class="playlist-item-header">
-                    <div class="playlist-number">3</div>
+                    <div class="playlist-number" style="background:#d97706;">3</div>
                     <div class="playlist-title">Chammak Challo</div>
-                    <div class="playlist-mood">COMMERCIAL</div>
+                    <div class="playlist-mood" style="background:rgba(217,119,6,0.25);color:#fbbf24;border:1px solid rgba(217,119,6,0.4);">COMMERCIAL</div>
                     <span class="bpm-badge">128 BPM</span>
                 </div>
                 <div class="playlist-details">
@@ -1548,9 +1569,9 @@
             <!-- Titre 4 -->
             <div class="playlist-item">
                 <div class="playlist-item-header">
-                    <div class="playlist-number">4</div>
+                    <div class="playlist-number" style="background:#7c3aed;">4</div>
                     <div class="playlist-title">Naane Indhiran</div>
-                    <div class="playlist-mood">ÉNERGIE TAMOULE</div>
+                    <div class="playlist-mood" style="background:rgba(124,58,237,0.25);color:#c4b5fd;border:1px solid rgba(124,58,237,0.4);">ÉNERGIE TAMOULE</div>
                     <span class="bpm-badge">110 BPM</span>
                 </div>
                 <div class="playlist-details">
@@ -1568,9 +1589,9 @@
             <!-- Titre 5 -->
             <div class="playlist-item">
                 <div class="playlist-item-header">
-                    <div class="playlist-number">5</div>
+                    <div class="playlist-number" style="background:#b45309;">5</div>
                     <div class="playlist-title">Khaanthaa</div>
-                    <div class="playlist-mood">ÉLÉGANCE ÉPIQUE</div>
+                    <div class="playlist-mood" style="background:rgba(180,83,9,0.25);color:#f59e0b;border:1px solid rgba(180,83,9,0.4);">ÉLÉGANCE ÉPIQUE</div>
                     <span class="bpm-badge">105 BPM</span>
                 </div>
                 <div class="playlist-details">
@@ -1588,9 +1609,9 @@
             <!-- Titre 6 -->
             <div class="playlist-item">
                 <div class="playlist-item-header">
-                    <div class="playlist-number">6</div>
+                    <div class="playlist-number" style="background:#b90d01;">6</div>
                     <div class="playlist-title">Jai Ho</div>
-                    <div class="playlist-mood">FINAL EXPLOSIF</div>
+                    <div class="playlist-mood" style="background:rgba(185,13,1,0.25);color:#f87171;border:1px solid rgba(185,13,1,0.4);">FINAL EXPLOSIF</div>
                     <span class="bpm-badge">140 BPM</span>
                 </div>
                 <div class="playlist-details">
