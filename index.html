@@ -21,8 +21,60 @@
             min-height: 100vh;
             padding: 40px 20px;
             display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        /* Navigation */
+        .top-nav {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(0, 0, 0, 0.92);
+            border: 2px solid #d29d59;
+            border-radius: 12px;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-label {
+            color: #d29d59;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 5px;
+        }
+
+        .nav-link {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 7px 18px;
+            border-radius: 6px;
+            border: 1px solid rgba(210, 157, 89, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .nav-link:hover {
+            border-color: #d29d59;
+            background: rgba(210, 157, 89, 0.15);
+            color: #fff;
+        }
+
+        .nav-link.active {
+            background: #b90d01;
+            color: #fff;
+            border-color: #b90d01;
         }
 
         .devis-container {
@@ -1101,6 +1153,22 @@
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <span class="nav-label">
+            <svg style="width:16px;height:16px;fill:#d29d59;vertical-align:middle;margin-right:4px;" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            Parvati India
+        </span>
+        <a href="index.html" class="nav-link active">
+            <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            Proposition
+        </a>
+        <a href="playlist.html" class="nav-link">
+            <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            Playlist Medley
+        </a>
+    </nav>
+
     <div class="devis-container">
         <!-- Header -->
         <div class="header">

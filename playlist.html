@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Medley Personnalisée | Mme Sartre Betty — Parvati India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            background-image: url('https://parvati-india.fr/wp-content/uploads/2023/10/Devotional-Background-For-god-worship-Animation-video.00_00_09_20.Still001.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        /* Navigation */
+        .top-nav {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(0, 0, 0, 0.92);
+            border: 2px solid #d29d59;
+            border-radius: 12px;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-label {
+            color: #d29d59;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 5px;
+        }
+
+        .nav-link {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 7px 18px;
+            border-radius: 6px;
+            border: 1px solid rgba(210, 157, 89, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .nav-link:hover {
+            border-color: #d29d59;
+            background: rgba(210, 157, 89, 0.15);
+            color: #fff;
+        }
+
+        .nav-link.active {
+            background: #b90d01;
+            color: #fff;
+            border-color: #b90d01;
+        }
+
+        /* Container */
+        .page-container {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(0, 0, 0, 0.92);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border: 2px solid #d29d59;
+        }
+
+        /* Header */
+        .header {
+            background: #b90d01;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 160px;
+            margin: 0 auto 18px auto;
+            display: block;
+        }
+
+        .header-deco {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .header-deco svg {
+            fill: #d29d59;
+            width: 24px;
+            height: 24px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 10px;
+        }
+
+        .header .client-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(210,157,89,0.5);
+            border-radius: 20px;
+            padding: 5px 16px;
+            font-size: 0.9rem;
+            color: #d29d59;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* Intro block */
+        .intro-block {
+            background: rgba(210, 157, 89, 0.1);
+            border-bottom: 2px solid #d29d59;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        .intro-block p {
+            color: #e0e0e0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .intro-block p strong {
+            color: #d29d59;
+        }
+
+        /* Progress bar */
+        .progression-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 18px 30px;
+            background: rgba(15,15,15,0.95);
+            border-bottom: 1px solid rgba(210,157,89,0.2);
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        .prog-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            min-width: 100px;
+        }
+
+        .prog-dot {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.8rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .prog-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            max-width: 80px;
+        }
+
+        .prog-connector {
+            height: 3px;
+            flex: 1;
+            min-width: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Mood colors */
+        .mood-romantique   { background: #6b4c9a; }
+        .mood-elegance     { background: #2e7d7d; }
+        .mood-transition   { background: #d97706; }
+        .mood-epique       { background: #7c3aed; }
+        .mood-puissance    { background: #b45309; }
+        .mood-final        { background: #b90d01; }
+
+        .label-romantique  { color: #a78bca; }
+        .label-elegance    { color: #5bb5b5; }
+        .label-transition  { color: #fbbf24; }
+        .label-epique      { color: #c4b5fd; }
+        .label-puissance   { color: #f59e0b; }
+        .label-final       { color: #f87171; }
+
+        .conn-romantique  { background: linear-gradient(90deg, #6b4c9a, #2e7d7d); }
+        .conn-elegance    { background: linear-gradient(90deg, #2e7d7d, #d97706); }
+        .conn-transition  { background: linear-gradient(90deg, #d97706, #7c3aed); }
+        .conn-epique      { background: linear-gradient(90deg, #7c3aed, #b45309); }
+        .conn-puissance   { background: linear-gradient(90deg, #b45309, #b90d01); }
+
+        /* Songs section */
+        .songs-section {
+            padding: 30px 40px;
+            background: rgba(15,15,15,0.95);
+        }
+
+        .song-card {
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(210, 157, 89, 0.15);
+            transition: border-color 0.3s ease;
+        }
+
+        .song-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .song-card:hover {
+            border-color: rgba(210, 157, 89, 0.4);
+        }
+
+        .song-card.final-card {
+            border: 2px solid #b90d01;
+            box-shadow: 0 0 20px rgba(185, 13, 1, 0.25);
+        }
+
+        .song-card.client-request {
+            border-color: rgba(210, 157, 89, 0.5);
+        }
+
+        .song-header {
+            display: flex;
+            align-items: center;
+            padding: 18px 22px;
+            gap: 16px;
+            border-bottom: 1px solid rgba(210, 157, 89, 0.1);
+            flex-wrap: wrap;
+        }
+
+        .song-number {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .song-title-block {
+            flex: 1;
+        }
+
+        .song-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 3px;
+        }
+
+        .song-subtitle {
+            font-size: 0.82rem;
+            color: #888;
+        }
+
+        .song-badges {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .badge-mood {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-client {
+            background: rgba(210, 157, 89, 0.2);
+            color: #d29d59;
+            border: 1px solid rgba(210, 157, 89, 0.4);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        .badge-final {
+            background: rgba(185, 13, 1, 0.3);
+            color: #f87171;
+            border: 1px solid rgba(185, 13, 1, 0.5);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .song-body {
+            padding: 18px 22px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .song-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .song-detail {
+            font-size: 0.9rem;
+            color: #bbb;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .song-detail svg {
+            fill: #d29d59;
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .song-detail strong {
+            color: #d29d59;
+        }
+
+        .song-actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .youtube-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #b90d01;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .youtube-btn:hover {
+            background: transparent;
+            border-color: #b90d01;
+            color: #b90d01;
+        }
+
+        .youtube-btn svg {
+            fill: currentColor;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .tempo-visual {
+            background: rgba(210, 157, 89, 0.08);
+            border: 1px solid rgba(210, 157, 89, 0.2);
+            border-radius: 8px;
+            padding: 10px 14px;
+            text-align: center;
+        }
+
+        .tempo-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #d29d59;
+            line-height: 1;
+        }
+
+        .tempo-unit {
+            font-size: 0.75rem;
+            color: #888;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        /* Total bar */
+        .total-bar {
+            margin: 0 40px 30px;
+            background: #b90d01;
+            color: white;
+            padding: 16px 25px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .total-bar svg {
+            fill: white;
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            padding: 25px 40px;
+            text-align: center;
+            border-top: 2px solid #d29d59;
+        }
+
+        .footer-logo {
+            max-width: 100px;
+            margin: 0 auto 12px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .footer p {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 680px) {
+            body { padding: 15px 10px; }
+
+            .top-nav { padding: 10px 15px; }
+
+            .header { padding: 25px 20px; }
+            .header h1 { font-size: 1.5rem; }
+
+            .intro-block { padding: 18px 20px; }
+
+            .progression-bar { padding: 14px 15px; gap: 0; }
+            .prog-step { min-width: 60px; }
+            .prog-label { font-size: 0.58rem; max-width: 60px; }
+            .prog-dot { width: 22px; height: 22px; font-size: 0.7rem; }
+
+            .songs-section { padding: 20px 15px; }
+
+            .song-header { padding: 14px 16px; gap: 10px; }
+            .song-title { font-size: 1.1rem; }
+
+            .song-body {
+                grid-template-columns: 1fr;
+                padding: 14px 16px;
+                gap: 12px;
+            }
+
+            .total-bar { margin: 0 15px 20px; font-size: 1rem; }
+
+            .footer { padding: 20px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <span class="nav-label">
+            <svg style="width:16px;height:16px;fill:#d29d59;vertical-align:middle;margin-right:4px;" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            Parvati India
+        </span>
+        <a href="index.html" class="nav-link">
+            <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            Proposition
+        </a>
+        <a href="playlist.html" class="nav-link active">
+            <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            Playlist Medley
+        </a>
+    </nav>
+
+    <div class="page-container">
+
+        <!-- Header -->
+        <div class="header">
+            <img src="https://parvati-india.fr/wp-content/uploads/2023/10/LOGO-PARVATI-INDIA-2.png" alt="Parvati India" class="logo">
+            <div class="header-deco">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            </div>
+            <h1>PLAYLIST MEDLEY PERSONNALISÉE</h1>
+            <p class="subtitle">6 titres — Montée progressive • Refrains uniquement</p>
+            <div class="client-badge">
+                <svg style="width:14px;height:14px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                Mme SARTRE BETTY — Mariage 2 mai
+            </div>
+        </div>
+
+        <!-- Intro -->
+        <div class="intro-block">
+            <p>
+                Ce mix respecte la demande d'intégrer <strong>Khaanthaa</strong> et de terminer
+                par l'explosion de <strong>Jai Ho</strong>. La progression part d'un romantisme
+                doux pour culminer dans un final festif inoubliable.
+            </p>
+        </div>
+
+        <!-- Progression visuelle -->
+        <div class="progression-bar">
+            <div class="prog-step">
+                <div class="prog-dot mood-romantique">1</div>
+                <span class="prog-label label-romantique">Romantique</span>
+            </div>
+            <div class="prog-connector conn-romantique"></div>
+            <div class="prog-step">
+                <div class="prog-dot mood-elegance">2</div>
+                <span class="prog-label label-elegance">Élégance</span>
+            </div>
+            <div class="prog-connector conn-elegance"></div>
+            <div class="prog-step">
+                <div class="prog-dot mood-transition">3</div>
+                <span class="prog-label label-transition">Énergie</span>
+            </div>
+            <div class="prog-connector conn-transition"></div>
+            <div class="prog-step">
+                <div class="prog-dot mood-epique">4</div>
+                <span class="prog-label label-epique">Épique</span>
+            </div>
+            <div class="prog-connector conn-epique"></div>
+            <div class="prog-step">
+                <div class="prog-dot mood-puissance">5</div>
+                <span class="prog-label label-puissance">Puissance</span>
+            </div>
+            <div class="prog-connector conn-puissance"></div>
+            <div class="prog-step">
+                <div class="prog-dot mood-final">6</div>
+                <span class="prog-label label-final">FINAL</span>
+            </div>
+        </div>
+
+        <!-- Songs -->
+        <div class="songs-section">
+
+            <!-- 1. Mast Magan -->
+            <div class="song-card">
+                <div class="song-header">
+                    <div class="song-number mood-romantique">1</div>
+                    <div class="song-title-block">
+                        <div class="song-title">Mast Magan</div>
+                        <div class="song-subtitle">Arijit Singh — Film 2 States (2014)</div>
+                    </div>
+                    <div class="song-badges">
+                        <span class="badge-mood mood-romantique" style="color:#fff;">Romantique</span>
+                    </div>
+                </div>
+                <div class="song-body">
+                    <div class="song-info-block">
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                            <span><strong>Style :</strong> Romantique / Entrée élégante</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                            <span><strong>Durée :</strong> ~45 sec (refrain)</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+                            <span><strong>Mouvements :</strong> Entrée main dans la main, regards amoureux, pas croisés simples</span>
+                        </div>
+                    </div>
+                    <div class="song-actions">
+                        <div class="tempo-visual">
+                            <div class="tempo-value">93</div>
+                            <div class="tempo-unit">BPM</div>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=xitd9mEZIHk" target="_blank" class="youtube-btn">
+                            <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                            Écouter sur YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Naane Indhiran -->
+            <div class="song-card">
+                <div class="song-header">
+                    <div class="song-number mood-elegance">2</div>
+                    <div class="song-title-block">
+                        <div class="song-title">Naane Indhiran</div>
+                        <div class="song-subtitle">Devi Sri Prasad — Film Sivaji (Rajinikanth, 2007)</div>
+                    </div>
+                    <div class="song-badges">
+                        <span class="badge-mood mood-elegance" style="color:#fff;">Élégance Tamoule</span>
+                    </div>
+                </div>
+                <div class="song-body">
+                    <div class="song-info-block">
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                            <span><strong>Style :</strong> Élégance Tamoule / Travail des mudras</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                            <span><strong>Durée :</strong> ~1 min 15 (refrain)</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+                            <span><strong>Mouvements :</strong> Ondulations sensuelles, mudras élégants, rotations lentes</span>
+                        </div>
+                    </div>
+                    <div class="song-actions">
+                        <div class="tempo-visual">
+                            <div class="tempo-value">110</div>
+                            <div class="tempo-unit">BPM</div>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=r50QPUqErgM" target="_blank" class="youtube-btn">
+                            <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                            Écouter sur YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Chammak Challo -->
+            <div class="song-card">
+                <div class="song-header">
+                    <div class="song-number mood-transition">3</div>
+                    <div class="song-title-block">
+                        <div class="song-title">Chammak Challo</div>
+                        <div class="song-subtitle">Akon feat. Hamsika Iyer — Film Ra.One (2011)</div>
+                    </div>
+                    <div class="song-badges">
+                        <span class="badge-mood mood-transition" style="color:#fff;">Transition Énergie</span>
+                    </div>
+                </div>
+                <div class="song-body">
+                    <div class="song-info-block">
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                            <span><strong>Style :</strong> Transition Énergie / Pas iconiques</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                            <span><strong>Durée :</strong> ~1 min (refrain)</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+                            <span><strong>Mouvements :</strong> Shoulder moves alternés, hook step iconique, break de tempo</span>
+                        </div>
+                    </div>
+                    <div class="song-actions">
+                        <div class="tempo-visual">
+                            <div class="tempo-value">128</div>
+                            <div class="tempo-unit">BPM</div>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=ladKqvPqMxc" target="_blank" class="youtube-btn">
+                            <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                            Écouter sur YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Khaanthaa -->
+            <div class="song-card client-request">
+                <div class="song-header">
+                    <div class="song-number mood-epique">4</div>
+                    <div class="song-title-block">
+                        <div class="song-title">Khaanthaa</div>
+                        <div class="song-subtitle">Demande spéciale — Betty</div>
+                    </div>
+                    <div class="song-badges">
+                        <span class="badge-mood mood-epique" style="color:#fff;">Élégance Épique</span>
+                        <span class="badge-client">Demande client</span>
+                    </div>
+                </div>
+                <div class="song-body">
+                    <div class="song-info-block">
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                            <span><strong>Style :</strong> Élégance Épique / Transition dramatique</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                            <span><strong>Durée :</strong> ~1 min (refrain)</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+                            <span><strong>Mouvements :</strong> Port de bras ample, lignes dramatiques en duo, montée vers le final</span>
+                        </div>
+                    </div>
+                    <div class="song-actions">
+                        <div class="tempo-visual">
+                            <div class="tempo-value">105</div>
+                            <div class="tempo-unit">BPM</div>
+                        </div>
+                        <a href="https://www.youtube.com/results?search_query=Khaanthaa+official+song" target="_blank" class="youtube-btn">
+                            <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                            Rechercher sur YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Vaathi Coming -->
+            <div class="song-card">
+                <div class="song-header">
+                    <div class="song-number mood-puissance">5</div>
+                    <div class="song-title-block">
+                        <div class="song-title">Vaathi Coming</div>
+                        <div class="song-subtitle">Anirudh Ravichander — Film Master (Tamil, 2021)</div>
+                    </div>
+                    <div class="song-badges">
+                        <span class="badge-mood mood-puissance" style="color:#fff;">Montée en puissance</span>
+                    </div>
+                </div>
+                <div class="song-body">
+                    <div class="song-info-block">
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                            <span><strong>Style :</strong> Montée en puissance / "Shoulder move" viral</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                            <span><strong>Durée :</strong> ~1 min 15 (refrain)</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+                            <span><strong>Mouvements :</strong> Shoulder move viral, pas de 2 énergiques, préparation public pour le final</span>
+                        </div>
+                    </div>
+                    <div class="song-actions">
+                        <div class="tempo-visual">
+                            <div class="tempo-value">134</div>
+                            <div class="tempo-unit">BPM</div>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=fRD_3vJagxk" target="_blank" class="youtube-btn">
+                            <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                            Écouter sur YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Jai Ho -->
+            <div class="song-card final-card">
+                <div class="song-header">
+                    <div class="song-number mood-final">6</div>
+                    <div class="song-title-block">
+                        <div class="song-title">Jai Ho</div>
+                        <div class="song-subtitle">A.R. Rahman — Film Slumdog Millionaire (2008) · Oscar & Grammy</div>
+                    </div>
+                    <div class="song-badges">
+                        <span class="badge-mood mood-final" style="color:#fff;">Final Explosif</span>
+                        <span class="badge-client">Demande client</span>
+                        <span class="badge-final">FINAL</span>
+                    </div>
+                </div>
+                <div class="song-body">
+                    <div class="song-info-block">
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                            <span><strong>Style :</strong> Final Explosif — clôture festive du médley</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                            <span><strong>Durée :</strong> ~1 min 15 (refrain)</span>
+                        </div>
+                        <div class="song-detail">
+                            <svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+                            <span><strong>Mouvements :</strong> Explosion finale, jump léger, claps collectifs (public suit), invitation piste + freeze final</span>
+                        </div>
+                    </div>
+                    <div class="song-actions">
+                        <div class="tempo-visual" style="border-color:rgba(185,13,1,0.4);background:rgba(185,13,1,0.1);">
+                            <div class="tempo-value" style="color:#f87171;">140</div>
+                            <div class="tempo-unit">BPM</div>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=H1-RSRXmdpo" target="_blank" class="youtube-btn">
+                            <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                            Écouter sur YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Total -->
+        <div class="total-bar">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            Durée totale mixée : ~6 minutes — 6 titres (refrains uniquement)
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <img src="https://parvati-india.fr/wp-content/uploads/2023/10/LOGO-PARVATI-INDIA-2.png" alt="Parvati India" class="footer-logo">
+            <p>
+                <a href="index.html" style="color:#d29d59;text-decoration:none;font-weight:600;">
+                    ← Retour à la proposition principale
+                </a>
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
