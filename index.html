@@ -457,6 +457,84 @@
             text-align: center;
         }
 
+        /* Bilan prestation */
+        .bilan-prestation {
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(25, 25, 25, 0.98) 100%);
+            border-top: 3px solid #d29d59;
+            text-align: center;
+        }
+
+        .bilan-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #155724, #1e7e34);
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(30, 126, 52, 0.4);
+        }
+
+        .bilan-title {
+            color: #d29d59;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .bilan-subtitle {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .bilan-cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .bilan-card {
+            background: rgba(30, 30, 30, 0.9);
+            border: 2px solid #d29d59;
+            border-radius: 14px;
+            padding: 28px 30px;
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+            text-align: center;
+        }
+
+        .bilan-card .bilan-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .bilan-card h4 {
+            color: #d29d59;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .bilan-card p {
+            color: #fff;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
         /* Footer */
         .footer {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -1629,6 +1707,33 @@
             <div class="playlist-total">
                 <svg class="icon" viewBox="0 0 24 24" style="fill: white; vertical-align: middle; margin-right: 8px;"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
                 Durée totale mixée : ~6 minutes
+            </div>
+        </div>
+
+        <!-- Bilan prestation -->
+        <div class="bilan-prestation">
+            <div class="bilan-badge">
+                <svg style="width:20px;height:20px;fill:#fff;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Prestation terminée
+            </div>
+            <div class="bilan-title">🎉 La prestation s'est déroulée avec succès !</div>
+            <div class="bilan-subtitle">La chorégraphie Bollywood a été réalisée dans sa totalité — les clients sont ravis.</div>
+            <div class="bilan-cards">
+                <div class="bilan-card">
+                    <span class="bilan-card-icon">✅</span>
+                    <h4>Prestation accomplie</h4>
+                    <p>Toutes les séances ont été menées à bien. La chorégraphie a été exécutée le jour J avec succès.</p>
+                </div>
+                <div class="bilan-card">
+                    <span class="bilan-card-icon">😊</span>
+                    <h4>Clients satisfaits</h4>
+                    <p>Les clients sont très contents du résultat. Leur entrée de bal Bollywood a été un moment mémorable.</p>
+                </div>
+                <div class="bilan-card">
+                    <span class="bilan-card-icon">⭐</span>
+                    <h4>Mission réussie</h4>
+                    <p>Merci pour votre confiance. Ce fut un plaisir de vous accompagner dans ce beau projet.</p>
+                </div>
             </div>
         </div>
 
